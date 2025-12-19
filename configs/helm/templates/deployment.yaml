@@ -23,9 +23,6 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      {{- if and .Values.gpu.enabled (or (eq .Values.gpu.type "nvidia") (not .Values.gpu.type)) }}
-      runtimeClassName: nvidia
-      {{- end }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
