@@ -67,3 +67,6 @@ service:
 serviceAccount:
   create: true
   automount: false
+extraEnv:
+  - name: "SGLANG_USE_MODELSCOPE"
+    value: "1"
